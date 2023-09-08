@@ -1,0 +1,47 @@
+  <div class="w-100 d-flex justify-content-center">
+    <div class="w-75 my-4 fluid-main">
+        <a style="color: #ff4081" (click)="goToHome()"> Back to home page</a>
+        <div class="mat-headline-3 my-4" style="min-width: 460px">Subscripition Page</div>
+        <!--Make transfers section-->
+        <div class="row section w-100 p-3 g-0">
+
+            <div class="field-wrapper" >
+                <div class="field-wrapper">
+                    <mat-form-field class="w-100">
+                        <mat-label>Name</mat-label>
+                        <input type="text" matInput [formControl]="nameForm">
+                    </mat-form-field>
+                </div>
+                <div class="field-wrapper">
+                    <mat-form-field class="w-100">
+                        <mat-label>E-mail</mat-label>
+                        <input type="email" matInput [formControl]="emailForm">
+                    </mat-form-field>
+                </div>
+                <div class="field-wrapper">
+                    <mat-form-field class="w-100">
+                        <mat-label>Card Number</mat-label>
+                        <input type="text" matInput [formControl]="cardNumberForm" placeholder="ffffffffffff">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="w-50 ps-4">
+                <div class="field-wrapper">
+                    <mat-form-field class="w-100">
+                        <mat-label>CVV</mat-label>
+                        <input type="text" matInput [formControl]="cvvForm">
+                    </mat-form-field>
+                </div>
+                <div class="field-wrapper">
+                    <mat-form-field class="w-100">
+                        <mat-label>Amount</mat-label>
+                        <input type="date" matInput name="expirationDateForm" class="form-control" required="required" [formControl]="expirationDateForm">
+                    </mat-form-field>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <button mat-button type="submit" color="primary" [disabled]="!paymentButtonEnabled" (click) = "makeSubscription()">Confirm Transfer
+                    </button>
+                </div>
+            </div>
+        </div>

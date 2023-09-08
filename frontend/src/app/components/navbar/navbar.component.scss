@@ -1,0 +1,43 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+.buttonIcon {
+    font-size: 1.5rem !important;
+    height: 1.5rem !important;
+    width: auto !important
+}
+
+.buttonText {
+    font-size: 1.2rem !important;
+}
+
+@media only screen and (max-width: 776px) {
+    .buttonText {
+        display: none;
+    }
+
+
+    .toolbar-item-spacer {
+        flex: 1 1 auto;
+    }
+
+    .app-container {
+        height: 90%;
+        margin: 0;
+    }
+    .app-sidenav {
+        width: 230px;
+    }
+    .app-sidenav-content {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
